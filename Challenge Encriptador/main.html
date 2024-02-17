@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <title>Encriptar / Desencriptar</title>
+    <link rel="stylesheet" href="estilos/reset.css">
+    <link rel="stylesheet" href="estilos/style.css">
+    <script src="scripts/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="encabezado">
+            <img id="imagen" src="imagenes/Logo.jpg" alt="Logo Alura">
+            <div class="contenedor-botones">
+                <ul>
+                    <li><button title="Reinicia los campos" type="button" onclick="reset();"
+                            class="boton-encabezado">Reset</button></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="ingreso-mensaje">
+            <textarea class="ingreso-texto" id="ingresoTexto" placeholder="Ingresa el texto aquí"></textarea>
+            <p>&#x24D8 No puedes usar mayúsculas o caracteres especiales.</p>
+            <div class="area-botones">
+                <button type="button" onclick="asignarMensaje('encriptar');" class="boton encriptar">Encriptar</button>
+                <button type="button" onclick="asignarMensaje('desencriptar');"
+                    class="boton desencriptar">Desencriptar</button>
+            </div>
+
+        </div>
+
+        <div class="lectura-mensaje">
+            <textarea class="salida-texto" id="salidaTexto"
+                style="background-image: url(imagenes/Muñeco.jpg);"></textarea>
+            <div class="contenedor-texto" id="contenedorTexto">
+                <p class="linea" id="linea">Ningún mensaje fue encontrado</p>
+                <p class="linea" id="linea">Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+            <button type="button" onclick="copiar();" id="copiar" class="boton copiar">Copiar</button>
+        </div>
+    </main>
+    <footer>
+        <p>Desarrollado por José Armando Acevedo</p>
+        <p>&copy ALURA LATAM - ONE - G6 2024 </p>
+    </footer>
+</body>
+
+</html>
