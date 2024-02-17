@@ -1,0 +1,356 @@
+/*estilos del header*/
+:root{
+    --color-fondo:#f3f5fc;
+    --color-fondo-secundario:#FFFFFF;
+    --sombra-boton:#495057;
+    --color-fondo-hover: #4675af;
+    --color-fondo-active: #4675af;
+    --color-borde-salida:#000000;
+    --color-borde-boton:#0A3871;
+    --texto-area-entrada:#0A3871;
+    --texto-area-salida:#495057;
+    --texto-parrafo:#343A40;   
+    --color-fondo-encriptar:#0A3871;
+    --color-fondo-desencriptar:#D8DFE8;
+    --color-fondo-copiar:#FFFFFF;
+    --texto-boton-claro:#FFFFFF;
+    --texto-boton-oscuro:#0A3871;
+    
+}
+
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+} 
+
+*{
+    font-family: "Ubuntu", sans-serif;  
+    font-weight: 400;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;      
+    font-family: "Ubuntu", sans-serif;
+    background-color: var(--color-fondo);
+}
+
+.encabezado{    
+    position: relative;         
+}
+
+.encabezado img{
+    display: inline-block;
+    margin: 2% 0 2.8% 2%;        
+}
+
+.contenedor-botones{
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+    width: 10%;    
+    margin: 0;    
+    -ms-transform: translateY(-40%);
+    transform: translateY(-40%);  
+    text-align: center;     
+}
+
+ul li{
+    display: inline-block;
+       
+}
+
+.boton-encabezado{    
+    border-radius: 8px;
+    box-shadow: 0 5px var(--sombra-boton);
+    cursor: pointer;  
+    background-color: var(--color-fondo-encriptar);
+    border: 1px solid var(--color-borde-boton);
+    color: var(--texto-boton-claro);
+    padding: 8px 50px;    
+}
+
+.boton-encabezado:hover{
+    background: var(--color-fondo-hover);   
+}
+
+.boton-encabezado:active{
+    background: var(--color-fondo-active);
+    box-shadow: 0 1px var(--sombra-boton);
+    transform: translateY(2px);
+}
+
+
+/*estilos del main*/
+
+.ingreso-mensaje{
+    position: absolute;
+    left: 18%;
+    display: inline-block;
+    width: 45%; 
+    height: 70vh;   
+    margin-bottom: 2.5%;   
+}
+
+.ingreso-texto{
+    width: 100%;
+    margin-bottom: 2.5%; 
+    height: 75%;  
+    font-size: 2em; 
+    resize: none;
+    border: none;
+    outline: none;
+    background-color: var(--color-fondo);
+    color: var(--texto-area-entrada);
+    
+}
+
+.ingreso-texto::placeholder{
+    color: var(--texto-area-entrada);
+}
+
+.ingreso-mensaje p{
+    font-size: 1.125em;
+    margin-bottom: 2.5%;
+    color: var(--texto-parrafo);
+}
+
+.area-botones{
+    text-align: center;
+    margin-bottom: 2.5%;
+}
+
+.boton{
+    width: 48.50%;
+    height: 65px;
+    text-align: center;
+    border-radius: 24px;
+    border: 1px solid;
+    font-size: 1.5em;
+    box-shadow: 0 5px var(--sombra-boton);
+    cursor: pointer;
+}
+
+.boton:hover{
+    background: var(--color-fondo-hover);
+}
+
+.boton:active{
+    background: var(--color-fondo-active);
+    box-shadow: 0 1px var(--sombra-boton);
+    transform: translateY(2px);
+}
+
+.encriptar{
+    margin-right: 1%;
+    background-color: var(--color-fondo-encriptar);
+    border: 1px solid var(--color-borde-boton);
+    color: var(--texto-boton-claro);
+       
+}
+
+.desencriptar{
+    margin-left: 1%;
+    background-color: var(--color-fondo-desencriptar);
+    border: 1px solid var(--color-borde-boton);
+    color: var(--texto-boton-oscuro) ;
+   
+}
+
+.lectura-mensaje{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    display: inline-block;
+    width: 25%;
+    height: 90vh; 
+    border: 1px solid var(--color-borde-salida); 
+    border-radius: 24px;
+    text-align: center; 
+    background-color: var(--color-fondo-secundario);   
+
+}
+
+.salida-texto{      
+    display: block;      
+    background-repeat: no-repeat;
+    background-size: 85%;
+    background-position: center;
+    width: 85%;
+    height: 76%;
+    margin: 5% auto;
+    font-size: 2em;
+    resize: none;
+    border: none;
+    outline: none;
+    color: var(--texto-area-salida);
+}
+
+.contenedor-texto{      
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    margin: 0;
+    width: 90%;    
+    -ms-transform: translateY(-60%);
+    transform: translateY(-60%); 
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); 
+    
+}
+
+.contenedor-texto p{
+    color: var(--texto-parrafo);
+}
+
+.contenedor-texto p:first-child{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+
+.copiar{
+    display: none;
+    width: 90%;
+    background-color: var(--color-fondo-copiar);
+    border: 1px solid var(--color-borde-boton);
+    color: var(--texto-boton-oscuro);
+    margin: 0 auto;
+}
+
+footer{
+    margin-top: auto;
+    margin-left: 2%;
+    margin-bottom: 0.5%;
+    font-size: 0.75em;
+    color: var(--texto-parrafo);
+}
+
+@media screen and (max-width:1024px){
+    
+    .body{
+        height: auto;
+    }
+    .lectura-mensaje{
+        height: 65vh;     
+    }    
+}
+
+
+@media screen and (max-width:820px){
+
+    .body{
+        height: auto;
+    }
+
+    .boton-encabezado{    
+        padding: 10px 50px;
+            
+    }
+
+    .ingreso-mensaje{
+        display: block;
+        position: static;
+        width: 90%;
+        margin: 0 auto;
+        height: 60vh;
+        margin-bottom: 2.5%;    
+    }
+
+    .ingreso-texto{
+        height: 80%;  
+              
+    }
+
+    .lectura-mensaje{
+        display: block;
+        position: relative;
+        width: 90%;
+        height: auto;
+        min-height: 16vh;
+        right: 0;
+        margin: 0 auto;
+        margin-bottom: 5%;
+    }
+
+    .salida-texto{
+        display: none;
+        background-image: none;              
+    }
+
+    .contenedor-texto{      
+        display: block;
+        position: inherit;  
+        margin-top: 5%;            
+           
+    }
+
+    .copiar{
+        margin-bottom: 4%;
+    }
+
+}
+
+@media screen and (max-width:430px){
+    
+    .encabezado img{
+        width: 20%;       
+    }
+
+    .contenedor-botones{
+        width: 35%;                  
+    }
+
+    .ingreso-mensaje{
+        display: block;
+        position: static;
+        height: 60vh;
+        margin-bottom: 2.5%;    
+    }
+
+    .ingreso-texto{
+        height: 58%;   
+    }
+
+    .boton{
+        width: 100%;
+        margin-top: 4%;
+        height: 7vh;
+    }
+
+    .lectura-mensaje{
+        display: block;        
+        position: relative;
+        width: 90%;
+        height: auto;
+        min-height: 17vh;
+        right: 0;
+        margin: 5% auto;        
+        
+    }
+
+    .salida-texto{
+        display: none;
+        background-image: none;              
+    }
+
+    .contenedor-texto{      
+        display: block;
+        position: inherit;  
+        margin-top: 5%;            
+           
+    }
+
+    .copiar{
+        width: 80%;
+    }
+
+    
+   
+
+}
